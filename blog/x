@@ -1,0 +1,58 @@
+[?25l[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[?12l[?25h[?1049h[?1h=[1;45r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[45;1H"models.py" 24L, 529C
+Error detected while processing /Users/Lokh/.vim/ftplugin/python/pymode.vim:
+line    1:
+E121: Undefined variable: g:pymode
+E15: Invalid expression: !g:pymode || pymode#default('b:pymode', 1)
+line    8:
+E117: Unknown function: pymode#default
+E15: Invalid expression: !pymode#default('g:pymode_init', 1)
+line   23:
+E121: Undefined variable: g:pymode_run
+E15: Invalid expression: g:pymode_run
+line   33:
+E121: Undefined variable: g:pymode_breakpoint
+E15: Invalid expression: g:pymode_breakpoint
+line   40:
+E121: Undefined variable: g:pymode_folding
+E15: Invalid expression: g:pymode_folding
+line   49:
+E121: Undefined variable: g:pymode_trim_whitespaces
+E15: Invalid expression: g:pymode_trim_whitespaces
+line   54:
+E121: Undefined variable: g:pymode_options
+E15: Invalid expression: g:pymode_options
+line   69:
+E121: Undefined variable: g:pymode_lint
+E15: Invalid expression: g:pymode_lint
+line  102:
+E121: Undefined variable: g:pymode_doc
+E15: Invalid expression: g:pymode_doc
+line  114:
+E121: Undefined variable: g:pymode_rope
+E15: Invalid expression: g:pymode_rope
+Error detected while processing /Users/Lokh/.vim/after/ftplugin/python.vim:
+line    1:
+E121: Undefined variable: g:pymode
+E15: Invalid expression: !g:pymode
+line    5:
+E121: Undefined variable: g:pymode_motion
+E15: Invalid expression: g:pymode_motion
+line   47:
+E121: Undefined variable: g:pymode_rope
+E15: Invalid expression: g:pymode_rope && g:pymode_rope_completion[27m[m[H[2J[1;1Hfrom django.db import models
+from django.contrib.auth.models import User
+
+# Create your models here.
+
+class Blog(models.Model):
+    title = models.CharField(max_length=50)[9;4H def __unicode__(self):[10;8H return self.title
+
+
+class Entry(models.Model):
+    title  = models.CharField(max_length=50)
+    blog   = models.ForeignKey(Blog)
+    text   = models.CharField(max_length=4000)
+    date   = models.DateTimeField('date published')
+    author = models.ForeignKey(User)[20;4H def __unicode__(self):[21;8H return self.text[25;1H[94m~                                                                                                                  [26;1H~                                                                                                                  [27;1H~                                                                                                                  [28;1H~                                                                                                                  [29;1H~                                                                                                                  [30;1H~                                                                                                                  [31;1H~                                                                                                                  [32;1H~                                                                                                                  [33;1H~                                                                                                                  [34;1H~                                                                                                                  [35;1H~                                                                                                                  [36;1H~                                                                                                                  [37;1H~                                                                                                                  [38;1H~                                                                                                                  [39;1H~                                                                                                                  [40;1H~                                                                                                                  [41;1H~                                                                                                                  [42;1H~                                                                                                                  [43;1H~                                                                                                                  [m[45;1H2014-09-17 14:55:51,664:ERROR:vim:file_vcs_status:Exception while computing segment: unknown locale: UTF-8Traceback (most recent call last)[45;35H[K[45;1H  File "/Users/Lokh/.vim/bundle/powerline/powerline/segment.py", line 169, in process_segment    contents = segment['contents_func'](pl, segment_info)[45;58H[K[45;3HFile "/Users/Lokh/.vim/bundle/powerline/powerline/segment.py", line 381, in <lambda>    contents_func = lambda pl, segment_info: _contents_func(pl=pl, segment_info=segment_info, **args)  File "/Users/Lokh/.vim/bundle/powerline/powerline/segments/vim/__init__.py", line 522, in file_vcs_status    status = repo.status(os.path.relpath(name, repo.directory))[45;64H[K[45;3HFile "/Users/Lokh/.vim/bundle/powerline/powerline/lib/vcs/git.py", line 81, in status    extra_ignore_files=tuple(join(gitd, x) for x in ('logs/HEAD', 'info/exclude')),[45;84H[K[45;3HFile "/Users/Lokh/.vim/bundle/powerline/powerline/lib/vcs/__init__.py", line 130, in get_file_status    file_status_cache[keypath] = ans = get_func(directory, file_path)[45;70H[K[45;3HFile "/Users/Lokh/.vim/bundle/powerline/powerline/lib/vcs/git.py", line 171, in do_status    return next(self._gitcmd(directory, 'status', '--porcelain', '--ignored', '--', path))[:2]  File "/Users/Lokh/.vim/bundle/powerline/powerline/lib/shell.py", line 56, in readlines[45;89H[K[45;3H  encoding = get_preferred_input_encoding()[45;46H[K[45;3HFile "/Users/Lokh/.vim/bundle/powerline/powerline/lib/encoding.py", line 62, in get_preferred_input_encoding    or locale.getdefaultlocale()[1][45;36H[K[45;3HFile "/usr/lib/python2.7/locale.py", line 511, in getdefaultlocale    return _parse_localename(localename)[45;41H[K[45;3HFile "/usr/lib/python2.7/locale.py", line 443, in _parse_localename    raise ValueError, 'unknown locale: %s' % localename[45;56H[K[45;1HValueError: unknown locale: UTF-8[45;34H[K[44;1H[1m[38;5;22m[48;5;148m NORMAL [m[38;5;148m[48;5;240m [m[38;5;250m[48;5;240m develop [m[38;5;245m[48;5;240m [m[38;5;250m[48;5;240m./[m[1m[38;5;231m[48;5;240mmodels.py [m[38;5;240m[48;5;236m [m[38;5;231m[48;5;236m                                       [m[38;5;247m[48;5;236munix[m[38;5;244m[48;5;236m [m[38;5;247m[48;5;236m utf-8[m[38;5;244m[48;5;236m [m[38;5;247m[48;5;236m python[m[38;5;240m[48;5;236m [m[38;5;70m[48;5;240m   4%[m[38;5;252m[48;5;240m [m[38;5;235m[48;5;252m  [m[1m[38;5;235m[48;5;252m  1[m[38;5;22m[48;5;252m:1  [1;1H[?12l[?25h[?25l[m[44;102H[38;5;70m[48;5;240m8[m[8C[1m[38;5;235m[48;5;252m2[m[38;5;22m[48;5;252m:[2;1H[?12l[?25h[?25l[m[45;1HType  :quit<Enter>  to exit Vim[45;32H[K[2;1H[?12l[?25h[45;1H[?1l>[?1049lVim: Error reading input, exiting...
+Vim: Finished.
+[45;1H
